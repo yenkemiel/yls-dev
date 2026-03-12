@@ -2,8 +2,8 @@ package homework;
 
 public class CommandLineArgsDemo {
     public static void main(String[] args) {
-        
-        // 1. 指讀取第一個參數
+
+        // 1. 只讀取第一個參數
         if(args.length > 0){
 
             System.out.println(args[0]);
