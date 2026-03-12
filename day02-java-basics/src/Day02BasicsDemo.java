@@ -19,13 +19,15 @@ public class Day02BasicsDemo {
 
         // 2.3 大小寫敏感
         // 類別名稱為駝峰命名
-        class MyClass {}
-        // 變數名稱為小駝峰命名
-        int myVariable;
-        // 方法名稱為小駝峰命名
-        void myMethod() {}
-        // 常數名稱為全大寫加底線
-        static final int MY_CONSTANT = 100;
+        class MyClass {
+            // 變數名稱為小駝峰命名
+            int myVariable;
+            // 方法名稱為小駝峰命名
+            void myMethod() {}
+            // 常數名稱為全大寫加底線
+            static final int MY_CONSTANT = 100;
+        }
+
 
         // 3.跳脫字元練習
         // 3.1 倒退字元 \b
@@ -44,7 +46,7 @@ public class Day02BasicsDemo {
         System.out.println("\"Hello World!\""); // "Hello World!"
         // 3.7 反斜線 \\
         System.out.println("This is a backslash: \\"); // This is a backslash: \
-        // 3.5 Unicode字元 \u
+        // 3.5 Unicode字元
         System.out.println("\u2665"); // 顯示一個愛心符號   
     }
 }
