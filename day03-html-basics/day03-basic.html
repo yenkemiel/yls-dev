@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!-- 宣告文件類型，告訴瀏覽器這是一個 HTML5 文件 -->
+
+<html lang="zh">
+<!-- 整個 HTML 文件的開始，lang="zh" 表示網頁語言是中文 -->
+
+    <head>
+        <!-- head 區：放網頁的設定資訊，不會顯示在頁面上 -->
+
+        <!-- 設定網頁文字編碼為 UTF-8（支援中文） -->
+        <meta charset="UTF-8">
+
+        <!-- 設定手機裝置顯示比例，讓網頁在手機上正常縮放 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- 瀏覽器分頁顯示的標題 -->
+        <title>基礎網頁</title>
+    </head>
+
+    <body>
+        <!-- body 區：網頁實際顯示的內容 -->
+
+        <!-- p：段落文字 -->
+        <p>hello</p>
+
+        <!-- a：超連結 (anchor)
+            href = 連結網址 -->
+        <a href="http://apple.com/tw">Apple</a>
+
+        <!-- h1：標題 (Heading)，h1~h6，h1最大 -->
+        <h1>hello</h1>
+
+        <!-- i：斜體文字 (italic) -->
+        <h1><i>hello</i></h1>
+
+        <!-- HTML 會忽略多餘空白 -->
+        <h1>    文字最前面有空格不會顯現</h1>
+        <!--
+        HTML 解析時：
+            多個空格、tab、換行
+        都會被壓縮成一個空白
+        所以前面打很多空格也不會顯示
+        -->
+
+        <!-- br：強制換行 (line break) -->
+        <!-- br 是單標籤，不需要結束標籤 -->
+        <h1>第一行<br>第二行</h1>
+        <!-- ====================================== -->
+
+        <!-- 常見 HTML 特殊符號 (HTML Entity) -->
+        <!-- 因為這些符號在 HTML 中有特殊用途，所以需要轉換 -->
+
+        <!-- 空白字元&nbsp; -->
+        <!-- non-breaking space（不換行空格） -->
+        <h1>&nbsp;&nbsp;前面強迫空格</h1>
+        <!--
+        &nbsp; = 強制空格
+
+        HTML 會自動忽略多個空白，
+        如果需要顯示空格，就要使用 &nbsp;
+
+        常用情境：
+            1. 排版
+            2. 表格對齊
+            3. 防止文字換行
+        -->
+
+        <!-- > 與 < -->
+        <h1>我是大於 &gt; 和小於 &lt;</h1>
+        <!--
+        &gt; = >
+        &lt; = <
+        -->
+        
+        <!-- 雙引號" -->
+        <h1>&quot;hello&quot;</h1>
+  
+        <!-- &amp; -->
+        <h1>Tom &amp; Jerry</h1>
+
+        <!-- &copy; -->
+        <h1>&copy; 2026 My Website</h1>
+        <!--
+        &copy; = ©
+
+        代表「版權符號 (Copyright)」
+        常用在網站頁尾 (footer)
+        -->
+
+    </body>
+
+</html>

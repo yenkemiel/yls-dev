@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>立即訂位 | La Dolce Vita 義式餐廳</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 專屬於訂位頁面的微調 */
+        .booking-page {
+            background: #121212;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .info-box {
+            margin-top: 30px;
+            padding: 20px;
+            border: 1px dashed #d4af37;
+            color: #d4af37;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body class="booking-page">
+
+    <nav class="navbar">
+        <div class="logo"><a href="index.html" style="color: #d4af37; text-decoration: none;">La Dolce Vita</a></div>
+        <ul class="nav-links">
+            <li><a href="index.html">返回首頁</a></li>
+            <li><a href="index.html#menu">查看菜單</a></li>
+        </ul>
+    </nav>
+
+    <section class="section">
+        <div class="booking-container">
+            <h2 style="color: #fff; margin-bottom: 10px;">線上預約訂位</h2>
+            <p style="color: #888; margin-bottom: 30px;">請填寫以下資訊，我們將保留座位 15 分鐘。</p>
+            
+            <form id="resForm" class="booking-form">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="您的姓名" required>
+                    <input type="tel" id="phone" placeholder="聯絡電話" required>
+                </div>
+                <div class="form-group">
+                    <input type="date" id="date" required>
+                    <select id="time" required>
+                        <option value="">選擇時段</option>
+                        <option value="11:30">11:30 (午餐)</option>
+                        <option value="13:00">13:00 (午餐)</option>
+                        <option value="18:00">18:00 (晚餐)</option>
+                        <option value="19:30">19:30 (晚餐)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select id="guests" required>
+                        <option value="">人數</option>
+                        <option value="1">1 位</option>
+                        <option value="2">2 位</option>
+                        <option value="4">3-4 位</option>
+                        <option value="6">5-6 位</option>
