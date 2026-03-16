@@ -1,0 +1,22 @@
+# compiled class
+*.class
+
+# log files
+*.log
+
+# package files
+*.jar
+*.war
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# build
+target/
+bin/
+out/
