@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Day04ArrayDemo {
     public static void main(String[] args) {
 
@@ -51,9 +53,9 @@ public class Day04ArrayDemo {
         arr[1] = 10;
         arr[2] = 100;
 
-        System.out.println(array[0]);
-        System.out.println(array[1]);
-        System.out.println(array[2]);
+        System.out.println(arr[0]);
+        System.out.println(arr[1]);
+        System.out.println(arr[2]);
 
 
         // 6. 初始化陣列 (Array Initializer)
@@ -62,7 +64,7 @@ public class Day04ArrayDemo {
         int[] arr1 = {5, 3, 8, 1};
 
         // 方法2
-        int[] arr2 = new int[]{5, 3, 8, 1};
+        int[] arr2 = new int[]{5, 3, 8, 1}; // 不建議
 
 
         // 7. 建立後預設值
@@ -113,16 +115,29 @@ public class Day04ArrayDemo {
         }
 
         // 計算平均
-        double avg = sum / (double) arr3.length;
+	double avg = sum /arr3.length; //31/6 -> 6.0 -> 錯誤答案
+        double avg1 = sum / (double) arr3.length; //31/6.0 -> 6.2 ->才是對的
+	double avg2 = (double) sum / arr3.length;
+
 
         // 找最大值
-        int max = arr3[0];
+        int max = arr3[0]; // 先假設第一個元素是最大值
 
+	// 從第二個元素開始比較
         for (int i = 1; i < arr3.length; i++) {
             if (arr3[i] > max) {
                 max = arr3[i];
             }
         }
+        System.out.println("最大值 is " + max );
+
+	// 排序陣列（由小到大）
+	Arrays.sort(arr3);
+
+	// 讀取排序後的陣列
+	for (int value : arr3) {
+    	System.out.println(value);
+	}
 
 // 13. Arrays.toString() 可以把陣列轉成字串方便輸出
 // 如果直接印陣列會出現記憶體位置
@@ -134,7 +149,7 @@ int[] arrPrint = {1, 2, 3, 4, 5};
 
 // 正確示範
 // 需要 import java.util.Arrays;
-//System.out.println(java.util.Arrays.toString(arrPrint));
+//System.out.println(Arrays.toString(arrPrint));
 
 // 輸出結果
 // [1, 2, 3, 4, 5]

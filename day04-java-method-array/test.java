@@ -1,4 +1,4 @@
-public class Day04ArrayPractice {
+public class test {
     public static void main(String[] args) {
 
         // ================================

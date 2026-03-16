@@ -2,9 +2,7 @@ public class Day04Array2dDemo {
 
     public static void main(String[] args) {
 
-        // ================================
         // 1. 二維陣列 (2D Array)
-        // ================================
 
         // 1.1 宣告
         int[][] matrix;
@@ -19,9 +17,7 @@ public class Day04Array2dDemo {
         };
 
 
-        // ================================
         // 2. 二維陣列逐步設定值
-        // ================================
 
         int[][] matrix3;
 
@@ -42,9 +38,7 @@ public class Day04Array2dDemo {
         matrix3[1][2] = 7;
 
 
-        // ================================
         // 3. String 陣列範例
-        // ================================
 
         // 3.1 一維陣列
         String[] array1;
@@ -73,9 +67,7 @@ public class Day04Array2dDemo {
         array2D4[1] = new String[3];
 
 
-        // ================================
         // 4. 二維陣列示意 (row / column)
-        // ================================
 
         //      col0 col1 col2
         // row0   1    2    3
@@ -83,16 +75,15 @@ public class Day04Array2dDemo {
         // row2   7    8    9
 
 
-        // ================================
+
         // 5. 宣告與建立二維陣列
-        // ================================
 
         int[][] matrixA = new int[3][3];
 
 
-        // ================================
+
         // 6. 初始化二維陣列
-        // ================================
+
 
         int[][] matrixB = {
                 {1, 2, 3},
@@ -101,17 +92,16 @@ public class Day04Array2dDemo {
         };
 
 
-        // ================================
         // 7. 存取元素
-        // ================================
+
 
         System.out.println(matrixB[0][0]); // 1
         System.out.println(matrixB[1][2]); // 6
 
 
-        // ================================
-        // 8. 巢狀迴圈讀取 (Nested Loop)
-        // ================================
+        // 8. 巢狀迴圈讀取二維陣列 (Nested Loop)
+	// 外層控制列(row)
+	// 內層控制行(column)
 
         for (int i = 0; i < matrixB.length; i++) {
 
@@ -119,13 +109,13 @@ public class Day04Array2dDemo {
                 System.out.print(matrixB[i][j] + " ");
             }
 
-            System.out.println();
+           System.out.println();  // 每列印完換行
         }
 
 
-        // ================================
         // 9. for-each 讀取二維陣列
-        // ================================
+	// 第一層：讀取每一列(row)
+	// 第二層：讀取列中的每一個元素
 
         for (int[] row : matrixB) {
 
@@ -136,21 +126,38 @@ public class Day04Array2dDemo {
             System.out.println();
         }
 
+        // 9.2 for/for-each差別
+        // for: 一個一個元素讀取
+        // -> 使用 index (i,j)
+        // for-each: 先拿到一整列(row), 再從這列裡面一個一個拿元素
+        // -> 使用元素 (row,value)
 
-        // ================================
+
         // 10. 不規則陣列 (Jagged Array)
-        // ================================
+        // int[][] arr = new int[3][];
 
-        int[][] arr = new int[3][];
+        // arr[0] = new int[2];
+        // arr[1] = new int[4];
+        // arr[2] = new int[3];
+        int[][] arr ={{1,2},{1,2,3},{1,2,3,4}};
 
-        arr[0] = new int[2];
-        arr[1] = new int[4];
-        arr[2] = new int[3];
+        for (int i = 0; i < arr.length; i++) {
 
+            for (int j = 0; j < arr[i].length; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
 
-        // ================================
+            System.out.println();
+        }
+         
+        for(int row[]: arr){
+                for(int v:row){
+                        System.out.print(v + " ");
+                }
+                System.out.println();
+        }
+
         // 11. 常見錯誤
-        // ================================
 
         int[] arrError = new int[3];
 
@@ -161,9 +168,7 @@ public class Day04Array2dDemo {
         // ArrayIndexOutOfBoundsException
 
 
-        // ================================
         // 12. 補充：2D Array 本質
-        // ================================
 
         // Java 的二維陣列其實是：
         // 「陣列裡面放陣列」
