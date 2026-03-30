@@ -1,5 +1,5 @@
 
-public class Day04ArrayPractice{
+public class Day04ArrayHw{
 
     public static void main(String[] args){
 

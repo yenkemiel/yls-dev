@@ -1,6 +1,5 @@
-package homework;
 
-public class CommandLineArgsDemo {
+public class Day02CmdArgsHw{
     public static void main(String[] args) {
 
         // 1. 只讀取第一個參數

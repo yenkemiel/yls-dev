@@ -8,9 +8,7 @@ public class Day04MethodOverloading {
 
     }
 
-    // ===========================
     // 方法區
-    // ===========================
 
     // 方法多載 (Method Overloading)
     // 意思: 方法名稱相同，但參數不同
@@ -43,9 +41,7 @@ public class Day04MethodOverloading {
     public static void method(String s, int a) { } // 參數順序不同 (String 在前, int 在後)
     
 
-    // ===========================
     // 例子
-    // ===========================
     public static void add(int a, int b) {
         System.out.println("多載方法兩個參數相加結果: " + (a + b));
     }

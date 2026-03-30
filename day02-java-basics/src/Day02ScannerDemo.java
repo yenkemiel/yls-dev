@@ -1,6 +1,6 @@
 import java.util.Scanner; // 建立一個從鍵盤讀取資料的物件
 
-public class Day03ScannerDemo {
+public class Day02ScannerDemo {
 
     public static void main(String[] args) {
 
