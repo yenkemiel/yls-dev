@@ -2,22 +2,21 @@
 
 import java.util.Scanner;
 
-class Day07IdValidatorHw_v1{
-    public static void main(String[] args){
+class Day07IdValidatorHw_v1 {
+    public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
         sc.close();
-        
+
         // String s ="L123456789";
 
-        String n1 = s.substring(0,1); // 第1個字，英文
-        int n2 = Integer.parseInt(s.substring(1,2)); // 第2個字，性別碼
+        String n1 = s.substring(0, 1); // 第1個字，英文
+        int n2 = Integer.parseInt(s.substring(1, 2)); // 第2個字，性別碼
 
+        // 第一關驗證: 總長度是否為10個數字 & 性別碼第二碼是否為 1或2
+        if (s.length() == 10 && (n2 == 1 || n2 == 2)) {
 
-        // 第一關驗證: 總長度是否為10個數字 & 性別碼第二碼是否為 1或2 
-        if(s.length() == 10 && (n2 == 1 || n2 == 2)){
-            
             // 擷取第3-10個數字
             int n3 = Integer.parseInt(s.substring(2, 3)); // 第3個字
             int n4 = Integer.parseInt(s.substring(3, 4)); // 第4個字
@@ -33,99 +32,98 @@ class Day07IdValidatorHw_v1{
             switch (n1) {
 
                 case "A":
-                    n1 ="10";
+                    n1 = "10";
                     break;
                 case "B":
-                    n1 ="11";
-                    break;            
+                    n1 = "11";
+                    break;
                 case "C":
-                    n1 ="12";
+                    n1 = "12";
                     break;
                 case "D":
-                    n1 ="13";
+                    n1 = "13";
                     break;
                 case "E":
-                    n1 ="14";
+                    n1 = "14";
                     break;
                 case "F":
-                    n1 ="15";
+                    n1 = "15";
                     break;
                 case "G":
-                    n1 ="16";
+                    n1 = "16";
                     break;
                 case "H":
-                    n1 ="17";
+                    n1 = "17";
                     break;
                 case "I":
-                    n1 ="34";
+                    n1 = "34";
                     break;
                 case "J":
-                    n1 ="18";
+                    n1 = "18";
                     break;
                 case "K":
-                    n1 ="19";
+                    n1 = "19";
                     break;
                 case "M":
-                    n1 ="21";
+                    n1 = "21";
                     break;
                 case "N":
-                    n1 ="22";
-                    break;            
+                    n1 = "22";
+                    break;
                 case "O":
-                    n1 ="35";
-                    break;            
+                    n1 = "35";
+                    break;
                 case "P":
-                    n1 ="23";
+                    n1 = "23";
                     break;
                 case "Q":
-                    n1 ="24";
+                    n1 = "24";
                     break;
                 case "T":
-                    n1 ="27";
+                    n1 = "27";
                     break;
                 case "U":
-                    n1 ="28";
+                    n1 = "28";
                     break;
                 case "V":
-                    n1 ="29";
+                    n1 = "29";
                     break;
                 case "W":
-                    n1 ="32";
+                    n1 = "32";
                     break;
                 case "X":
-                    n1 ="30";
+                    n1 = "30";
                     break;
                 case "Z":
-                    n1 ="33";
+                    n1 = "33";
                     break;
                 default:
                     break;
-                    
+
             }
 
             // 2. 把對應數值拆成兩個字串, 轉成數字
-            int num1 = Integer.parseInt(n1.substring(0,1)); // 戶籍十位數
-            int num2 = Integer.parseInt(n1.substring(1,2)); // 戶籍個位數
-
+            int num1 = Integer.parseInt(n1.substring(0, 1)); // 戶籍十位數
+            int num2 = Integer.parseInt(n1.substring(1, 2)); // 戶籍個位數
 
             // 4. 驗證碼公式總和
-            int sum = num1*1 + num2*9 + n2*8 + n3*7 + 
-                        n4*6 + n5*5 + n6*4 + n7*3 + n8*2 + n9*1;
+            int sum = num1 * 1 + num2 * 9 + n2 * 8 + n3 * 7 +
+                    n4 * 6 + n5 * 5 + n6 * 4 + n7 * 3 + n8 * 2 + n9 * 1;
 
             // 5. 算出驗證碼
             int r = sum % 10;
             int result = 10 - r;
 
             // 第二關驗證: 驗證碼是否等於第十碼
-            if(result == n10){
+            if (result == n10) {
                 System.out.println("驗證成功");
-            }else{
+            } else {
                 System.out.println("驗證失敗");
             }
-        }else if(s.length() != 10){
-                System.out.println("長度必須是十個字");
-        }else if(n2 != 1 && n2 != 2) {
-                System.out.println("性別不符");
+        } else if (s.length() != 10) {
+            System.out.println("長度必須是十個字");
+        } else if (n2 != 1 && n2 != 2) {
+            System.out.println("性別不符");
         }
     }
 }
